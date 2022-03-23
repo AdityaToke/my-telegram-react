@@ -1,0 +1,46 @@
+{
+    "@type": "updateNewMessage",
+    "message": {
+        "@type": "message",
+        "id": 3904897024,
+        "sender_id": {
+            "@type": "messageSenderUser",
+            "user_id": 489575252
+        },
+        "chat_id": 489575252,
+        "is_outgoing": true,
+        "is_pinned": false,
+        "can_be_edited": true,
+        "can_be_forwarded": true,
+        "can_be_saved": true,
+        "can_be_deleted_only_for_self": true,
+        "can_be_deleted_for_all_users": false,
+        "can_get_statistics": false,
+        "can_get_message_thread": false,
+        "can_get_viewers": false,
+        "can_get_media_timestamp_links": false,
+        "has_timestamped_media": true,
+        "is_channel_post": false,
+        "contains_unread_mention": false,
+        "date": 1647889020,
+        "edit_date": 0,
+        "reply_in_chat_id": 0,
+        "reply_to_message_id": 0,
+        "message_thread_id": 0,
+        "ttl": 0,
+        "ttl_expires_in": 0,
+        "via_bot_user_id": 0,
+        "author_signature": "",
+        "media_album_id": "0",
+        "restriction_reason": "",
+        "content": {
+            "@type": "messageText",
+            "text": {
+                "@type": "formattedText",
+                "text": "yo",
+                "entities": []
+            }
+        }
+    },
+    "@client_id": 1
+}
