@@ -11,6 +11,7 @@ import FileStore from './FileStore';
 import TdLibController from '../Controllers/TdLibController';
 import ChatStore from './ChatStore';
 import { archivedGroups } from '../archived_group_list';
+import { specialGroups } from '../special_group_list';
 
 class MessageStore extends EventEmitter {
 
@@ -21,6 +22,7 @@ class MessageStore extends EventEmitter {
 
         this.addTdLibListener();
         this.archivedGroup = archivedGroups;
+        this.specialGroup = specialGroups;
     }
 
     reset = () => {
@@ -45,7 +47,8 @@ class MessageStore extends EventEmitter {
                 break;
             }
             case 'updateNewMessage': {
-                if (this.archivedGroup.includes(update.message.chat_id.toString()) && update.message.content["text"] && new Date().getHours() >= 9 && new Date().getMinutes() >= 15) {
+                console.log("[info]", update.message.content);
+                if ((this.archivedGroup.includes(update.message.chat_id.toString()) || this.specialGroup.includes(update.message.chat_id.toString())) && update.message.content["text"]) {
                     // only 1 bcoz we should hv only one 5 digit value.
                     const message = update.message.content["text"]["text"].toLowerCase().replace(/\n/g, " ");
                     if (message.match(/(?:^|\D)(\d{5})(?!\d)/g) && message.match(/(?:^|\D)(\d{5})(?!\d)/g).length === 1 && (message.includes("pe") || message.includes("ce"))) {
@@ -53,6 +56,8 @@ class MessageStore extends EventEmitter {
                         value.replace("pe","");
                         value.replace("ce","");
                         let type = message.includes("pe") ? "pe" : message.includes("ce") ? "ce" : "";
+                        let groupType = this.specialGroup.includes(update.message.chat_id.toString()) ? "special" : "normal";
+
                         document
                             .getElementById("stockAutoMaker")
                             .contentWindow.postMessage(
@@ -62,6 +67,8 @@ class MessageStore extends EventEmitter {
                                     message: update.message.content["text"]["text"],
                                     chatId: String(update.message.chat_id),
                                     mainMessage: value+"-"+type,
+                                    groupType: groupType,
+                                    date: new Date().toISOString()
                                 },
                                 "*"
                             );
