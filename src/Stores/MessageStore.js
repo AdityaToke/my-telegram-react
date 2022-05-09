@@ -56,20 +56,18 @@ class MessageStore extends EventEmitter {
                         value.replace("pe","");
                         value.replace("ce","");
                         let type = message.includes("pe") ? "pe" : message.includes("ce") ? "ce" : "";
-                        let groupType = this.specialGroup.includes(update.message.chat_id.toString()) ? "special" : "normal";
-
+                        const currentTime = new Date().getTime();
+                        const newFormattedData = {
+                            formattedTime: currentTime,
+                            time: new Date(currentTime).getHours()+":"+new Date(currentTime).getMinutes(),
+                            contractName: value+"-"+type,
+                            message: update.message.content["text"]["text"],
+                            chatId: String(update.message.chat_id),
+                        };
                         document
                             .getElementById("stockAutoMaker")
                             .contentWindow.postMessage(
-                                {
-                                    bankNiftyValue: value,
-                                    type: type,
-                                    message: update.message.content["text"]["text"],
-                                    chatId: String(update.message.chat_id),
-                                    mainMessage: value+"-"+type,
-                                    groupType: groupType,
-                                    date: new Date().toISOString()
-                                },
+                                newFormattedData,
                                 "*"
                             );
                         console.log("[data]", update.message.content["text"]["text"]);
