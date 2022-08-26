@@ -33,7 +33,7 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "start": "DISABLE_ESLINT_PLUGIN=true react-app-rewired --openssl-legacy-provider start",
+    "start": "DISABLE_ESLINT_PLUGIN=true react-app-rewired start",
     "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build && sw-precache-cra --config sw-config.js --no-minify",
     "test": "DISABLE_ESLINT_PLUGIN=true react-app-rewired test --env=jsdom",
     "eject": "DISABLE_ESLINT_PLUGIN=true react-scripts eject",
