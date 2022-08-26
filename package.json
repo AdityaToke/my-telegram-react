@@ -21,7 +21,7 @@
     "react-dom": "^16.12.0",
     "react-i18next": "^11.3.4",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "^3.1.1",
+    "react-scripts": "^5.0.0",
     "react-transition-group": "^4.3.0",
     "tdweb": "^1.7.10"
   },
@@ -34,7 +34,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "start": "DISABLE_ESLINT_PLUGIN=true react-app-rewired --openssl-legacy-provider start",
-    "build": "DISABLE_ESLINT_PLUGIN=true react-app-rewired build && sw-precache-cra --config sw-config.js --no-minify",
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build && sw-precache-cra --config sw-config.js --no-minify",
     "test": "DISABLE_ESLINT_PLUGIN=true react-app-rewired test --env=jsdom",
     "eject": "DISABLE_ESLINT_PLUGIN=true react-scripts eject",
     "predeploy": "npm run build",
@@ -57,8 +57,8 @@
       "no-unused-vars": "off",
       "no-useless-concat": "off",
       "no-use-before-define": "off",
-      "default-case":"off",
-      "no-mixed-operators":"off",
+      "default-case": "off",
+      "no-mixed-operators": "off",
       "no-useless-escape": "off",
       "eqeqeq": "off"
     }
