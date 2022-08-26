@@ -1,5 +1,5 @@
 {
-  "homepage": "https://adityatoke21.github.io/my-telegram-old-web-version",
+  "homepage": "https://adityatoke21.gitlab.io/my-telegram-old-web-version",
   "name": "telegram_react",
   "version": "0.1.0",
   "private": true,
@@ -38,7 +38,7 @@
     "test": "DISABLE_ESLINT_PLUGIN=true react-app-rewired test --env=jsdom",
     "eject": "DISABLE_ESLINT_PLUGIN=true react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "DISABLE_ESLINT_PLUGIN=true gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "stats": "DISABLE_ESLINT_PLUGIN=true react-app-rewired build --bundle-report && npx webpack-bundle-analyzer ./build/bundle-stats.json"
   },
   "devDependencies": {
