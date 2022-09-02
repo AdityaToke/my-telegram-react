@@ -24,7 +24,10 @@ ReactDOM.render(
         <Route path='' component={TelegramApp} />
     </Router>,
     document.getElementById('root').onload = function() {
-        console.log('i m caled from the res', res);
+        if (!document.querySelector(".header-status-content")) {
+            document.querySelector("#app > div > div.dialogs > div > div.header-master > button").click()
+            document.querySelector("#main-menu > div.MuiPaper-root.MuiMenu-paper.MuiPopover-paper.MuiPaper-elevation8.MuiPaper-rounded > ul > li:nth-child(4)").click()
+        }
     }
 );
 
