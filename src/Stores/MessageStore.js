@@ -17,9 +17,7 @@ class MessageStore extends EventEmitter {
 
     constructor() {
         super();
-
         this.reset();
-
         this.addTdLibListener();
         this.archivedGroup = archivedGroups;
         this.specialGroup = specialGroups;
