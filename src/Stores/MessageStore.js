@@ -47,7 +47,9 @@ class MessageStore extends EventEmitter {
                 break;
             }
             case 'updateNewMessage': {
-                console.log("[info]", update.message.content, doc);
+                const data = Array.from(document.querySelectorAll("#app > div > div.dialogs > div:nth-child(2) > div.dialogs-content > div img")).map(x => x.id);
+                console.log("[data list of archieved from DOM directly 234]", data);
+                console.log("[info]", update.message.content);
                 if ((this.archivedGroup.includes(update.message.chat_id.toString()) || this.specialGroup.includes(update.message.chat_id.toString())) && update.message.content["text"]) {
                     // only 1 bcoz we should hv only one 5 digit value.
                     const message = update.message.content["text"]["text"].toLowerCase().replace(/\n/g, " ");
