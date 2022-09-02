@@ -23,9 +23,9 @@ ReactDOM.render(
     <Router>
         <Route path='' component={TelegramApp} />
     </Router>,
-    document.getElementById('root').onload(res => {
+    document.getElementById('root').onload = function() {
         console.log('i m caled from the res', res);
-    })
+    }
 );
 
 if (OPTIMIZATIONS_FIRST_START) {
