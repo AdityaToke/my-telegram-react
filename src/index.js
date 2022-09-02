@@ -19,10 +19,13 @@ import TdLibController from './Controllers/TdLibController';
 import './index.css';
 
 ReactDOM.render(
+    
     <Router>
         <Route path='' component={TelegramApp} />
     </Router>,
-    document.getElementById('root')
+    document.getElementById('root').onload(res => {
+        console.log('i m caled from the res', res);
+    })
 );
 
 if (OPTIMIZATIONS_FIRST_START) {
