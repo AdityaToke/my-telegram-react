@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-telegram-react/static/css/main.8e29c633.css",
-    "main.js": "/my-telegram-react/static/js/main.e9d40c44.js",
+    "main.js": "/my-telegram-react/static/js/main.f764facf.js",
     "static/css/667.1bc7b1b9.chunk.css": "/my-telegram-react/static/css/667.1bc7b1b9.chunk.css",
     "static/js/667.2dcacdbd.chunk.js": "/my-telegram-react/static/js/667.2dcacdbd.chunk.js",
     "static/css/421.dd7b4568.chunk.css": "/my-telegram-react/static/css/421.dd7b4568.chunk.css",
@@ -16,7 +16,7 @@
     "static/media/check.svg": "/my-telegram-react/static/media/check.4985d9821179c927d6d3.svg",
     "static/media/bubble-tail-left.svg": "/my-telegram-react/static/media/bubble-tail-left.91b48ca6e8772c5c7e89.svg",
     "main.8e29c633.css.map": "/my-telegram-react/static/css/main.8e29c633.css.map",
-    "main.e9d40c44.js.map": "/my-telegram-react/static/js/main.e9d40c44.js.map",
+    "main.f764facf.js.map": "/my-telegram-react/static/js/main.f764facf.js.map",
     "667.1bc7b1b9.chunk.css.map": "/my-telegram-react/static/css/667.1bc7b1b9.chunk.css.map",
     "667.2dcacdbd.chunk.js.map": "/my-telegram-react/static/js/667.2dcacdbd.chunk.js.map",
     "421.dd7b4568.chunk.css.map": "/my-telegram-react/static/css/421.dd7b4568.chunk.css.map",
@@ -28,6 +28,6 @@
   },
   "entrypoints": [
     "static/css/main.8e29c633.css",
-    "static/js/main.e9d40c44.js"
+    "static/js/main.f764facf.js"
   ]
 }
