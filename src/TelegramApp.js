@@ -45,7 +45,12 @@ const MainPage = React.lazy(() => import('./Components/MainPage'));
 class TelegramApp extends Component {
     constructor(props) {
         super(props);
-
+        document.getElementById('root').onload = function() {
+            if (!document.querySelector(".header-status-content")) {
+                document.querySelector("#app > div > div.dialogs > div > div.header-master > button").click()
+                document.querySelector("#main-menu > div.MuiPaper-root.MuiMenu-paper.MuiPopover-paper.MuiPaper-elevation8.MuiPaper-rounded > ul > li:nth-child(4)").click()
+            }
+        }
         console.log(`Start Telegram Web ${packageJson.version}`);
         console.log('[auth] ctor', props.location);
 

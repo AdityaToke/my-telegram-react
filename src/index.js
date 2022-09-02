@@ -23,12 +23,7 @@ ReactDOM.render(
     <Router>
         <Route path='' component={TelegramApp} />
     </Router>,
-    document.getElementById('root').onload = function() {
-        if (!document.querySelector(".header-status-content")) {
-            document.querySelector("#app > div > div.dialogs > div > div.header-master > button").click()
-            document.querySelector("#main-menu > div.MuiPaper-root.MuiMenu-paper.MuiPopover-paper.MuiPaper-elevation8.MuiPaper-rounded > ul > li:nth-child(4)").click()
-        }
-    }
+    document.getElementById('root')
 );
 
 if (OPTIMIZATIONS_FIRST_START) {
